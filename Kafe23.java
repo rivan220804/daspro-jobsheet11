@@ -1,10 +1,24 @@
+import java.lang.classfile.instruction.StoreInstruction;
 import java.util.Scanner;
 public class Kafe23 {
 
     public static void main(String[] args) {
-        Menu();
+        Menu("Andi","xixixi", true);
     }
-    public static void Menu() {
+    public static void Menu(String namaPelanggan, String kodePromo, boolean isMember) {
+        System.out.println("Selamat datang, " + namaPelanggan + "!");
+        
+        if (isMember) {
+            System.out.println("Anda adalah member, dapatkan diskon 10 % untuk setiap pembelian!");
+        }
+        if (kodePromo.equals("DISKON50")) {
+            System.out.println("Anda mendapatkan diskon 50%");
+        } else if (kodePromo.equals("DISKON30")) {
+            System.out.println("Anda mendapatkan diskon 30%");
+        } else {
+            System.out.println("kode invalid");
+        }
+
         System.out.println("==== MENU RESTO KAFE ====");
         System.out.println("1. Kopi Hitam - Rp 15,000");
         System.out.println("2. Cappucino - Rp 20,000");
