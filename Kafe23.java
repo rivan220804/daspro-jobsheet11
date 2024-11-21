@@ -3,9 +3,12 @@ import java.util.Scanner;
 public class Kafe23 {
 
     public static void main(String[] args) {
-        Menu("Andi","xixixi", true);
-    }
-    public static void Menu(String namaPelanggan, String kodePromo, boolean isMember) {
+    Scanner sc = new Scanner(System.in);
+
+    String namaPelanggan = "Andi";
+    String kodePromo = "xixixi";
+    boolean isMember = true;
+
         System.out.println("Selamat datang, " + namaPelanggan + "!");
         
         if (isMember) {
@@ -28,5 +31,6 @@ public class Kafe23 {
         System.out.println("6. Mie Goreng - Rp 18,000");
         System.out.println("=========================");
         System.out.println("Silakan pilih menu yang anda inginkan.");
+
     }
 }
